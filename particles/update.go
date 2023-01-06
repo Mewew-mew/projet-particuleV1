@@ -1,7 +1,5 @@
 package particles
 
-
-
 ///"math/rand"
 ///"project-particles/config"
 ///"time"
@@ -12,16 +10,13 @@ package particles
 // projet.
 // C'est à vous de développer cette fonction.
 func (s *System) Update() {
-	
+
 	s.SpawnUp() // on rajoute des particule en fonction du spawn rate
-	
-	for e := s.Content.Front(); e != nil; e= e.Next(){
+
+	for e := s.Content.Front(); e != nil; e = e.Next() {
 		p := e.Value.(*Particle)
-		p.PositionX+=p.SpeedX
-		p.PositionY+=p.SpeedY
+		p.PositionX += p.SpeedX
+		p.PositionY += p.SpeedY
 	}
 
 }
-	
-
-

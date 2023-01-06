@@ -8,6 +8,7 @@ import "container/list"
 type System struct {
 	Content *list.List
 	tick int
+
 }
 
 // Particle définit une particule.
@@ -21,6 +22,5 @@ type Particle struct {
 	ColorRed, ColorGreen, ColorBlue float64 // Couleur
 	Opacity                         float64 // Transparence
 	SpeedX, SpeedY            		float64 // Vitesse
-	BorderSpan 						bool 
 }
 
