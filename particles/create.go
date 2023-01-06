@@ -10,7 +10,7 @@ func (s *System) Create(count int) {// cette fonction permet de générer les pa
 		posy = float64(config.General.SpawnY)
 	}
 
-
+//test
 	l := s.Content
 	for i := 0; i < count; i++ { 
 		if config.General.RandomSpawn {  
