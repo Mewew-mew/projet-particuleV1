@@ -7,7 +7,7 @@ import (
 
 // Vérification que les flotants fournis par getFloatInBounds sont bien
 // dans l'interval demandé
-func TestGetFloatInBoundsRange(t *testing.T) {
+func TestRange(t *testing.T) {
 	for i := 0; i < 100; i++ {
 		min := float64(rand.Intn(20))*rand.Float64() - 10
 		max := float64(rand.Intn(20))*rand.Float64() - 10
@@ -22,7 +22,7 @@ func TestGetFloatInBoundsRange(t *testing.T) {
 }
 
 // Vérification que tout se passe bien dans quelques cas particuliers
-func TestGetFloatInBoundsRangeSpecial(t *testing.T) {
+func TestRangeNul(t *testing.T) {
 	if getFloatInBounds(0, 0) != 0 {
 		t.Fail()
 	}
