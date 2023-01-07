@@ -6,8 +6,8 @@ import "container/list"
 // Pour le moment il ne contient qu'une liste de particules, mais cela peut
 // évoluer durant votre projet.
 type System struct {
-	Content *list.List
-	tick int
+	Content *list.List // contenue du System
+	tick int		   // nombre de fois que la fonction update
 }
 
 // Particle définit une particule.
@@ -21,6 +21,5 @@ type Particle struct {
 	ColorRed, ColorGreen, ColorBlue float64 // Couleur
 	Opacity                         float64 // Transparence
 	SpeedX, SpeedY            		float64 // Vitesse
-	BorderSpan 						bool 
 }
 
