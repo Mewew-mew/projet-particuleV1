@@ -13,7 +13,7 @@ import (
 	"image/color"
 	"golang.org/x/image/font/basicfont"	
 )
-
+// resetSystem est une fonction qui reset entirememnt le systeme et les particule créé
 func (g *game) resetSystem() {
 	assets.Get()
 	g.system = particles.NewSystem()
@@ -105,7 +105,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 
 
 		
-	// Afficher l'rrière plan du bouton avec la flèche à droite de l'écran
+	// Afficher l'arrière plan du bouton avec la flèche à droite de l'écran
 	ExtensionsButtonBackgroundOptions := ebiten.DrawImageOptions{}
 	ExtensionsButtonBackgroundOptions.GeoM.Translate(float64(config.General.WindowSizeX) - 50, float64(config.General.WindowSizeY) / 2 - 125)
 	screen.DrawImage(assets.ExtensionsButtonBackground, &ExtensionsButtonBackgroundOptions)
@@ -522,35 +522,35 @@ func (g *game) Draw(screen *ebiten.Image) {
 		screen.DrawImage(assets.CercleExtension, &CercleExtensionOptions)	
 	
 
-/*4*/			DrawExtensionOptions3 := ebiten.DrawImageOptions{}
-		DrawExtensionOptions3.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
-		DrawExtensionOptions3.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.71, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.055)
-		screen.DrawImage(assets.DrawExtension, &DrawExtensionOptions3)	
+/*4*/			DrawExtensionOptions := ebiten.DrawImageOptions{}
+		DrawExtensionOptions.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
+		DrawExtensionOptions.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.71, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.055)
+		screen.DrawImage(assets.DrawExtension, &DrawExtensionOptions)	
 
-/*5*/			GlueExtensionOptions4 := ebiten.DrawImageOptions{}
-		GlueExtensionOptions4.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
-		GlueExtensionOptions4.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.05, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.3775)
-		screen.DrawImage(assets.GlueExtension, &GlueExtensionOptions4)	
+/*5*/			GlueExtensionOptions := ebiten.DrawImageOptions{}
+		GlueExtensionOptions.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
+		GlueExtensionOptions.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.05, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.3775)
+		screen.DrawImage(assets.GlueExtension, &GlueExtensionOptions)	
 
-/*6*/			RainExtensionOptions5 := ebiten.DrawImageOptions{}
-		RainExtensionOptions5.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
-		RainExtensionOptions5.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.38, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.3775)
-		screen.DrawImage(assets.RainExtension, &RainExtensionOptions5)	
+/*6*/			SnowExtensionOptions := ebiten.DrawImageOptions{}
+		SnowExtensionOptions.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
+		SnowExtensionOptions.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.38, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.3775)
+		screen.DrawImage(assets.SnowExtension, &SnowExtensionOptions)	
 
 /*7*/			PatternExtensionOptions := ebiten.DrawImageOptions{}
 		PatternExtensionOptions.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
 		PatternExtensionOptions.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.05, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.7)
 		screen.DrawImage(assets.PatternExtension, &PatternExtensionOptions)	
 
-/*8*/			GravityExtensionOptions8 := ebiten.DrawImageOptions{}
-		GravityExtensionOptions8.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
-		GravityExtensionOptions8.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.71, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.3775)
-		screen.DrawImage(assets.GravityExtension, &GravityExtensionOptions8)	
+/*8*/			GravityExtensionOptions := ebiten.DrawImageOptions{}
+		GravityExtensionOptions.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
+		GravityExtensionOptions.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.71, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.3775)
+		screen.DrawImage(assets.GravityExtension, &GravityExtensionOptions)	
 
-		RainbowExtensionOptions10 := ebiten.DrawImageOptions{}
-		RainbowExtensionOptions10.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
-		RainbowExtensionOptions10.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.71, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.7)
-		screen.DrawImage(assets.RainbowExtension, &RainbowExtensionOptions10)
+		RainbowExtensionOptions := ebiten.DrawImageOptions{}
+		RainbowExtensionOptions.GeoM.Scale(BackgroundSizeX / 1006 * 0.42, BackgroundSizeX / 1006 * 0.42)
+		RainbowExtensionOptions.GeoM.Translate((float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.71, (float64(config.General.WindowSizeY) - (BackgroundSizeY)) / 2 + BackgroundSizeY * 0.7)
+		screen.DrawImage(assets.RainbowExtension, &RainbowExtensionOptions)
 		}	
 		
 		text.Draw(screen, strconv.Itoa(g.system.Content.Len()), basicfont.Face7x13, config.General.WindowSizeX / 2 - 15, 13, color.RGBA{0, 255, 0, 255})

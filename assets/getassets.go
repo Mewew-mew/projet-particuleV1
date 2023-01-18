@@ -10,7 +10,7 @@ import (
 
 // ParticleImage est une variable globale pour stocker l'image d'une particule
 var ParticleImage, ExtensionsButtonBackground, ExtensionsButton, ExtensionsBackground,
-ResetButton, CercleExtension, RainExtension, RainbowExtension, GlueExtension, DrawExtension,
+ResetButton, CercleExtension, SnowExtension, RainbowExtension, GlueExtension, DrawExtension,
 PatternExtension, GravityExtension, CustomExtension *ebiten.Image
 
 
@@ -84,7 +84,7 @@ func Get() {
 	if err != nil {
 		log.Fatal("Problem while loading extension cercle image: ", err)
 	}
-	RainExtension, _, err = ebitenutil.NewImageFromFile("assets/snow.png")
+	SnowExtension, _, err = ebitenutil.NewImageFromFile("assets/snow.png")
 	if err != nil {
 		log.Fatal("Problem while loading extension cercle image: ", err)
 	}
