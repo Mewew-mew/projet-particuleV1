@@ -8,7 +8,8 @@ import (
 // Vérification que les particules générées quand config.General.RandomSpawn
 // vaut true sont bien toutes à l'intérieur de l'écran
 func TestTrue(t *testing.T) {
-	config.General.RandomSpawn = true
+	config.General.RandomSpawnX = true
+	config.General.RandomSpawnY =true
 	config.General.InitNumParticles = 100
 
 	config.General.WindowSizeX = 800
@@ -28,7 +29,9 @@ func TestTrue(t *testing.T) {
 // vaut false sont bien toutes à la position demandée, c'est-à-dire aux
 // coordonnées (config.General.SpawnX, config.General.SpawnY)
 func TestFalse(t *testing.T) {
-	config.General.RandomSpawn = false
+	config.General.RandomSpawnX = false
+	config.General.RandomSpawnY = false
+
 
 	s := NewSystem()
 

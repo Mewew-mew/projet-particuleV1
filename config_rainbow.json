@@ -1,0 +1,59 @@
+{
+	"WindowTitle": "Project particles",
+	"WindowSizeX": 1920,
+  	"WindowSizeY": 1000,
+	"ParticleImage": "assets/particle_luciole.png",
+	"Debug": true,
+	"InitNumParticles": 20,
+	"Maxpartciles": 10000000,
+
+	"RandomSpawnX": false,
+	"RandomSpawnY": true,
+
+	"ScaleX": 1,
+	"ScaleY": 1,
+
+	"CercleHauteur": 100,
+	"CercleLargeur": 100,
+
+	"SpawnOnMouse": false,
+	"LockOnMouse": false,
+
+	"SpawnX": -10,
+	"SpawnY": 400,
+	"SpawnRate": 20,
+
+	"Speedfix": false,
+	"speedUnic": 12,
+
+	"MinSpeedX": 3.0,				 
+	"MaxSpeedX": 3.0,				 
+	"MinSpeedY":0,				 
+	"MaxSpeedY":0,				
+
+	"Gravite": false,
+	"ConstanteGravite": 0.5,
+
+	"RenderMarges": true,
+	"Marges":100,
+
+	"LifeSpan": false,
+	"LifeSpanDuration": 500,
+	
+	"Red": 1.0,
+	"Green": 0,
+	"Blue": 0,
+
+	"Multicolore": false,
+
+	"Rainbow":true,
+
+	"ColisionsBords": false,
+
+	"Circle": false,
+
+	"CollisionsParticules":false
+
+
+
+}

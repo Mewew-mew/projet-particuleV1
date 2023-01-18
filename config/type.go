@@ -13,11 +13,56 @@ type Config struct {
 	ParticleImage            string
 	Debug                    bool
 	InitNumParticles         int
-	RandomSpawn              bool
+	Maxpartciles			 int
+	RandomSpawnX             bool
+	RandomSpawnY             bool
+
+	ScaleX					 float64
+	ScaleY					 float64
+
+	CercleHauteur            float64
+	CercleLargeur			 float64
+
+	SpawnOnMouse			 bool
+	LockOnMouse				 bool
+
 	SpawnX, SpawnY           int
 	SpawnRate                float64
-	MinVelocityX, MaxVelocityX float64
-	MinVelocityY, MaxVelocityY float64
+
+	Speedfix				 bool
+	SpeedUnique				 float64
+	MinSpeedX				 float64
+	MaxSpeedX				 float64
+	MinSpeedY				 float64
+	MaxSpeedY				 float64
+
+	Gravite 				 bool
+	ConstanteGravite		 float64
+
+	RenderMarges			 bool
+	Marges					 float64
+
+	LifeSpan				 bool
+	LifeSpanDuration		 int
+
+
+	RandomOpacity			 bool
+	Opacity					 float64
+	Red						 float64
+	Green					 float64
+	Blue					 float64
+
+	Multicolore 			 bool
+
+	Rainbow					 bool
+	ColisionsBords			 bool
+	Circle					 bool
+
+	CollisionsParticules     bool
+
+	Pluie				 bool
+
+
 }
 
 var General Config

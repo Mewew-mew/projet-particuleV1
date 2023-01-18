@@ -7,7 +7,13 @@ import "container/list"
 // évoluer durant votre projet.
 type System struct {
 	Content *list.List
-	tick int
+	NumToSpawn  float64
+	ImageWidth float64 	  // Largeur de l'image
+	ImageHeight float64   // Hauteur de l'image
+	MouseX, MouseY int
+	ExtensionsButtonPressed bool
+	ActiveExtension string
+	PauseGame bool
 
 }
 
@@ -22,5 +28,7 @@ type Particle struct {
 	ColorRed, ColorGreen, ColorBlue float64 // Couleur
 	Opacity                         float64 // Transparence
 	SpeedX, SpeedY            		float64 // Vitesse
+	LifeSpan 						int // Duree de vie
+	Dead							bool // Particule morte (on n'agit plus dessus) (peut être tué par LifeSpan ou les marges)
 }
 
