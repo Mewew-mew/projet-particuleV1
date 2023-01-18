@@ -60,7 +60,9 @@ type Config struct {
 
 	CollisionsParticules     bool
 
-	Pluie				 bool
+	Pluie					 bool
+
+	Draw					 bool			
 
 
 }

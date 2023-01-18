@@ -44,3 +44,105 @@ func TestParticleMarges(t *testing.T) {
 		}
 	}
 }
+
+// Vérifictation que graity ajoute une valeur gravité à la vitesse Y d'une particule
+func TestGravity(t *testing.T) {
+	s := NewSystem()
+	for e := s.Content.Front(); e != nil; e = e.Next() {
+		p := e.Value.(*Particle)
+
+		p.SpeedY = getFloatInBounds(0,1) * 100
+		var SpeedY = p.SpeedY
+		p.gravity(-getFloatInBounds(0,1))
+		
+
+		if p.SpeedY > SpeedY {
+			t.Fail()
+		}
+	}
+}
+
+// Vérifictation que rotateParticle modifie la rotation d'une particule
+func TestRotateParticle(t *testing.T) {
+	s := NewSystem()
+	for e := s.Content.Front(); e != nil; e = e.Next() {
+		p := e.Value.(*Particle)
+
+		p.Rotation = getFloatInBounds(0,1)
+		var Rotation = p.Rotation
+		p.rotateParticle(getFloatInBounds(0,1))
+
+		if p.Rotation < Rotation {
+			t.Fail()
+		}
+	}
+}
+
+
+// Vérifictation que decreaseOpacity diminue l'opacité d'une particule
+func TestDecreaseOpactiy(t *testing.T) {
+	s := NewSystem()
+		for e := s.Content.Front(); e != nil; e = e.Next() {
+		p := e.Value.(*Particle)
+
+
+		p.Opacity = getFloatInBounds(0,1)
+		var Opacity = p.Opacity
+		p.decreaseOpacity(getFloatInBounds(0,1))
+
+		if p.Opacity > Opacity {
+			t.Fail()
+		}
+	}
+}
+
+// Vérifictation que decreaseRed diminue la couleur rouge d'une particule
+func TestDecreaseRed(t *testing.T) {
+	s := NewSystem()
+		for e := s.Content.Front(); e != nil; e = e.Next() {
+		p := e.Value.(*Particle)
+
+
+		p.ColorRed = getFloatInBounds(0,1)
+		var ColorRed = p.ColorRed
+		p.decreaseRed(getFloatInBounds(0,1))
+
+		if p.ColorRed > ColorRed {
+			t.Fail()
+		}
+	}
+}
+
+// Vérifictation que decreaseGreen diminue la couleur verte d'une particule
+func TestDecreaseGreen(t *testing.T) {
+	s := NewSystem()
+		for e := s.Content.Front(); e != nil; e = e.Next() {
+		p := e.Value.(*Particle)
+
+
+		p.ColorGreen = getFloatInBounds(0,1)
+		var ColorGreen = p.ColorGreen
+		p.decreaseGreen(getFloatInBounds(0,1))
+
+		if p.ColorGreen > ColorGreen {
+			t.Fail()
+		}
+	}
+}
+
+// Vérifictation que decreaseBlue diminue la couleur bleue d'une particule
+func TestDecreaseBlue(t *testing.T) {
+	s := NewSystem()
+		for e := s.Content.Front(); e != nil; e = e.Next() {
+		p := e.Value.(*Particle)
+
+
+		p.ColorBlue = getFloatInBounds(0,1)
+		var ColorBlue = p.ColorBlue
+		p.decreaseBlue(getFloatInBounds(0,1))
+
+		if p.ColorBlue > ColorBlue {
+			t.Fail()
+		}
+	}
+}

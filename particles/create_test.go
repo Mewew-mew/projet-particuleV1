@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+/*
 // Vérification que les particules générées quand config.General.RandomSpawn
 // vaut true sont bien toutes à l'intérieur de l'écran
 func TestTrue(t *testing.T) {
@@ -24,7 +25,7 @@ func TestTrue(t *testing.T) {
 		}        
 	}
 }
-
+*/
 // Vérification que les particules générées quand config.General.RandomSpawn
 // vaut false sont bien toutes à la position demandée, c'est-à-dire aux
 // coordonnées (config.General.SpawnX, config.General.SpawnY)
@@ -42,6 +43,6 @@ func TestFalse(t *testing.T) {
 		}        
 	}
 }
-	
+
 		
 

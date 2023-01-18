@@ -74,6 +74,7 @@ func setConfig(ParticleImage string, InitNumParticles int, Maxpartciles int, Ran
 		config.General.CollisionsParticules = CollisionsParticules
 		config.General.Pluie = Pluie
 
+
 	}
 	
 
@@ -242,6 +243,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					true, //CollisionsParticules
 					false,//Pluie
 
+
 				)				
 				g.resetSystem()
 				g.extensionChanged("Draw")
@@ -290,6 +292,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //Circle
 					true, //CollisionsParticules
 					false,//Pluie
+
 
 				)				
 				g.resetSystem()
@@ -340,6 +343,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //Circle
 					false, //CollisionsParticules
 					false,//Pluie
+
 
 				)				
 				g.resetSystem()
@@ -392,6 +396,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //CollisionsParticules
 					true,//Pluie
 
+
 				)				
 				g.resetSystem()
 				g.extensionChanged("Pluie avec des petit flocon")
@@ -440,6 +445,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //Circle
 					false, //CollisionsParticules
 					false,//Pluie
+
 
 				)				
 				g.resetSystem()
@@ -492,6 +498,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //CollisionsParticules
 					false,//Pluie
 
+
 				)				
 				g.resetSystem()
 				g.extensionChanged("Vagues multicolore")
@@ -502,6 +509,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 	if inpututil.IsKeyJustPressed(ebiten.KeySpace) {
 		g.system.PauseGame = !g.system.PauseGame
 	}
+	
 	if g.system.ExtensionsButtonPressed {
 
 /*1*/		ResetButtonOptions := ebiten.DrawImageOptions{}

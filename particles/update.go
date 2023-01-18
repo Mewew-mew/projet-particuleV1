@@ -15,7 +15,7 @@ import(
 // C'est à vous de développer cette fonction.
 func (s *System) Update() {
 
-	// Changer la couleur RGB de config (pour changer la couleur de base des particules lors du spawn)
+	// Changer la couleur RGB de config (pour changer la couleur de base des particules lors du spawn) ainsi cela donne l'effet d'un arc en ciel 
 	if config.General.Rainbow{
 	if config.General.Red >= 1 && config.General.Green <= 1 && config.General.Blue <= 0 { // Rouge
 		config.General.Green += 0.01
@@ -61,6 +61,13 @@ func (s *System) Update() {
 			p.PositionY += float64(s.MouseY - LastY) 
 		}
 
+		if config.General.Draw {
+			config.General.SpawnRate = 0
+			if ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft){
+				s.Create()
+			}
+		}
+
 		//Si Circle est activé, on créé un cercle virtuel ensuite chaque particule spawn sur ce cercle 
 		// de plus le centre du systeme deviens la souris , ainsi le generateur en forme de cercle suit le mouvement de la souris 
 		if config.General.Circle{
@@ -72,7 +79,8 @@ func (s *System) Update() {
 	
 		}
 
-		//
+		//Si Collisions Particule est activé, alors on créé une deuxieme boucle pour pas avoir deux fois la meme particule 
+		//si la premiere et la deuxieme particule se rencontre on annule leurs vitesse pour donné l'illusion quelle se colle 
 		if config.General.CollisionsParticules {
 			for e := s.Content.Front(); e != nil; e = e.Next() {
 				p1 := e.Value.(*Particle)
