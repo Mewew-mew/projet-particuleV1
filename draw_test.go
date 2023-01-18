@@ -46,7 +46,7 @@ func TestSetConfig (t *testing.T) {
 	config.General.LifeSpanDuration !=1000 || !config.General.RandomOpacity ||
 	config.General.Opacity !=1.0 || config.General.Red !=1.0 || config.General.Green !=1.0||
 	config.General.Blue!=1.0 || !config.General.Multicolore || !config.General.Rainbow ||
-	!config.General.ColisionsBords || !config.General.Circle || !config.General.CollisionsParticules || !config.General.Pluie {
+	!config.General.ColisionsBords || !config.General.Circle || !config.General.CollisionsParticules || !config.General.Snow {
 		t.Fail()
 	}
 }

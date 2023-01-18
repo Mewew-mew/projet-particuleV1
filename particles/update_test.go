@@ -37,9 +37,10 @@ func TestMove(t *testing.T){
 	for e := s.Content.Front(); e != nil; e = e.Next() {
 		var X,Y float64
 		p := e.Value.(*Particle)
-		s.Update()
-
 		X,Y = p.PositionX,p.PositionY
+
+		p.Move()
+
 		if p.PositionX != X || p.PositionY != Y {
 			t.Fail()
 		}

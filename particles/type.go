@@ -3,17 +3,16 @@ package particles
 import "container/list"
 
 // System définit un système de particules.
-// Pour le moment il ne contient qu'une liste de particules, mais cela peut
-// évoluer durant votre projet.
+// 
 type System struct {
 	Content *list.List
-	NumToSpawn  float64
+	NumToSpawn  float64	//
 	ImageWidth float64 	  // Largeur de l'image
 	ImageHeight float64   // Hauteur de l'image
-	MouseX, MouseY int
-	ExtensionsButtonPressed bool
-	ActiveExtension string
-	PauseGame bool
+	MouseX, MouseY int	// 
+	ExtensionsButtonPressed bool // Le bouton pour choisir les extensions a été pressé
+ 	ActiveExtension string	//Nom de l'extension active (il y a plusieurs extension possible)
+	PauseGame bool	//boolean  qui met en pause le systeme
 
 }
 

@@ -84,7 +84,7 @@ func Get() {
 	if err != nil {
 		log.Fatal("Problem while loading extension cercle image: ", err)
 	}
-	RainExtension, _, err = ebitenutil.NewImageFromFile("assets/pluie.png")
+	RainExtension, _, err = ebitenutil.NewImageFromFile("assets/snow.png")
 	if err != nil {
 		log.Fatal("Problem while loading extension cercle image: ", err)
 	}

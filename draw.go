@@ -35,7 +35,7 @@ func setConfig(ParticleImage string, InitNumParticles int, Maxpartciles int, Ran
 	RandomOpacity bool, Opacity float64,
 	Red float64, Green float64, Blue float64, Multicolore bool, Rainbow bool,
 	ColisionsBords bool,Circle bool,
-	CollisionsParticules bool, Pluie bool) {
+	CollisionsParticules bool, Snow bool) {
 		config.General.ParticleImage = ParticleImage
 		config.General.InitNumParticles = InitNumParticles
 		config.General.Maxpartciles = Maxpartciles
@@ -72,7 +72,7 @@ func setConfig(ParticleImage string, InitNumParticles int, Maxpartciles int, Ran
 		config.General.ColisionsBords = ColisionsBords
 		config.General.Circle = Circle
 		config.General.CollisionsParticules = CollisionsParticules
-		config.General.Pluie = Pluie
+		config.General.Snow = Snow
 
 
 	}
@@ -192,7 +192,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //ColisionsBords
 					true, //Circle
 					false, //CollisionsParticules
-					false,//Pluie
+					false,//Snow
 				)				
 				g.resetSystem()
 				g.extensionChanged("Cercle")
@@ -241,7 +241,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //ColisionsBords
 					false, //Circle
 					true, //CollisionsParticules
-					false,//Pluie
+					false,//Snow
 
 
 				)				
@@ -291,7 +291,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					true, //ColisionsBords
 					false, //Circle
 					true, //CollisionsParticules
-					false,//Pluie
+					false,//Snow
 
 
 				)				
@@ -342,7 +342,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					true, //ColisionsBords
 					false, //Circle
 					false, //CollisionsParticules
-					false,//Pluie
+					false,//Snow
 
 
 				)				
@@ -351,7 +351,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 			}
 
 			//5eme extension
-			//  Selectonner l'image corespondante pour sélectionner l'extension Pluie 
+			//  Selectonner l'image corespondante pour sélectionner l'extension Snow 
 
 			if float64(CursorXPosition) > (float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.38 &&
 			float64(CursorXPosition) < (float64(config.General.WindowSizeX) - BackgroundSizeX) / 2 + BackgroundSizeX * 0.38 + BackgroundSizeX / 1006 * 0.42 * 569 &&
@@ -394,12 +394,12 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //ColisionsBords
 					false, //Circle
 					false, //CollisionsParticules
-					true,//Pluie
+					true,//Snow
 
 
 				)				
 				g.resetSystem()
-				g.extensionChanged("Pluie avec des petit flocon")
+				g.extensionChanged("Snow avec des petit flocon")
 			}
 			// 6eme extension
 			//  Selectonner l'image corespondante pour sélectionner l'extension d'un patterne du rebond en continue exemple le logo DVD
@@ -444,7 +444,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					true, //ColisionsBords
 					false, //Circle
 					false, //CollisionsParticules
-					false,//Pluie
+					false,//Snow
 
 
 				)				
@@ -496,7 +496,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 					false, //ColisionsBords
 					false, //Circle
 					false, //CollisionsParticules
-					false,//Pluie
+					false,//Snow
 
 
 				)				
@@ -553,7 +553,7 @@ func (g *game) Draw(screen *ebiten.Image) {
 		screen.DrawImage(assets.RainbowExtension, &RainbowExtensionOptions10)
 		}	
 		
-			text.Draw(screen, strconv.Itoa(g.system.Content.Len()), basicfont.Face7x13, config.General.WindowSizeX / 2 - 15, 13, color.RGBA{0, 255, 0, 255})
+		text.Draw(screen, strconv.Itoa(g.system.Content.Len()), basicfont.Face7x13, config.General.WindowSizeX / 2 - 15, 13, color.RGBA{0, 255, 0, 255})
 		
 	
 		// Affichage de l'extension en bas à gauche de l'écran

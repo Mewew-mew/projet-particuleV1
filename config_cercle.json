@@ -52,6 +52,8 @@
 
 	"Circle": true,
 
-	"CollisionsParticules":false
+	"CollisionsParticules":false,
+
+	"Snow":false
 
 }

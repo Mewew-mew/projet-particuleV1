@@ -94,8 +94,8 @@ func (p *Particle) newParticle() {
 		p.decreaseBlue(0.002)
 	}
 
-
-	if config.General.Pluie{
+	//Si le Snow est activé, les particule vont petit à petit perdre la couleur rouge et vont tournée sur elle-meme 
+	if config.General.Snow{
 		p.decreaseRed(0.006)
 		p.rotateParticle(0.08)	}
 

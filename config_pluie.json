@@ -57,6 +57,6 @@
 
 	"CollisionsParticules":false,
 
-	"Pluie":true
+	"Snow":false
 
 }
